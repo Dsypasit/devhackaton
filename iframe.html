@@ -1,24 +1,36 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
     <body style="background-color: black;">
-        <div class="star">
-            <p style="color: white;">sun</p>            
-            <iframe id="main_ar" src="sun.html" style="width: 300px;height: 200;"></iframe>
+        <div class="container" style="text-align: center;">
+            <div class="star" style="align-items: center;justify-content: center;text-align: center;">
+                <h1 class="h1" id='ar-head' style="color: white;text-align: center;margin-top: 2rem;">sun</h1>            
+                <iframe id="main_ar" src="sun.html" style="width: 300px;height: 200; margin:1rem;"></iframe>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="changeAR('sun.html')">sun</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('mercury.html')">mercury</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('venus.html')">venus</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('earth.html')">earth</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('mars.html')">mars</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('saturn.html')">saturn</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('jupiter.html')">jupiter</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('uranus.html')">uranus</button>
+            <button type="button" class="btn btn-primary" onclick="changeAR('neptune.html')">neptune</button>
         </div>
-        <button onclick="changeAR('sun.html')">sun</button>
-        <button onclick="changeAR('mercury.html')">mercury</button>
-        <button onclick="changeAR('venus.html')">venus</button>
-        <button onclick="changeAR('earth.html')">earth</button>
-        <button onclick="changeAR('mars.html')">mars</button>
-        <button onclick="changeAR('saturn.html')">saturn</button>
-        <button onclick="changeAR('jupiter.html')">jupiter</button>
-        <button onclick="changeAR('uranus.html')">uranus</button>
-        <button onclick="changeAR('neptune.html')">neptune</button>
+
 
         <script>
             function changeAR(name){
-               var main_ar =  document.getElementById("main_ar");
-               main_ar.src = name;
+                var main_ar =  document.getElementById("main_ar");
+                var ar_head = document.getElementById('ar-head');
+                ar_head.innerHTML=name.split('.')[0]
+                main_ar.src = name;
             }
         </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        
     </body>
 </html>
