@@ -2,17 +2,33 @@
     <body style="background-color: black;">
         <div class="star">
             <p style="color: white;">sun</p>            
-            <iframe src="sun.html" style="width: 300px;height: 200;"></iframe>
+            <iframe id="main_ar" src="sun.html" style="width: 300px;height: 200;"></iframe>
         </div>
-        <div class="star">
+        <button onclick="changeAR('sun.html')">sun</button>
+        <button onclick="changeAR('mercury.html')">mercury</button>
+        <button onclick="changeAR('venus.html')">venus</button>
+        <button onclick="changeAR('earth.html')">earth</button>
+        <button onclick="changeAR('mars.html')">mars</button>
+        <button onclick="changeAR('saturn.html')">saturn</button>
+        <button onclick="changeAR('jupiter.html')">jupiter</button>
+        <button onclick="changeAR('uranus.html')">uranus</button>
+        <button onclick="changeAR('neptune.html')">neptune</button>
+
+        <script>
+            function changeAR(name){
+               var main_ar =  document.getElementById("main_ar");
+               main_ar.src = name;
+            }
+        </script>
+        <!-- <div class="star">
             <p style="color: white;">mercury</p>
             <iframe src="mercury.html" style="width: 300px;height: 200;"></iframe>            
         </div>
         <div class="star">
             <p style="color: white;">venus</p>
             <iframe src="venus.html" style="width: 300px;height: 200;"></iframe>            
-        </div>
-        <div class="star">
+        </div> -->
+        <!-- <div class="star">
             <p style="color: white;">earth</p>
             <iframe src="earth.html" style="width: 300px;height: 200;"></iframe>            
         </div>
@@ -35,6 +51,6 @@
         <div class="star">
             <p style="color: white;">neptune</p>
             <iframe src="neptune.html" style="width: 300px;height: 200;"></iframe>            
-        </div>
+        </div> -->
     </body>
 </html>
